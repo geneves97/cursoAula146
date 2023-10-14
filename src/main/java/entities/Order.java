@@ -1,9 +1,11 @@
 package entities;
 
 import entities.enums.OrderStatus;
+import lombok.Data;
 
 import java.util.Date;
 
+@Data
 public class Order {
     private Integer id;
     private Date moment;
@@ -15,5 +17,14 @@ public class Order {
         this.id = id;
         this.moment = moment;
         this.status = status;
+    }
+
+    @Override
+    public String toString() {
+        return "Order{" +
+                "id=" + id +
+                ", moment=" + moment +
+                ", status=" + status +
+                '}';
     }
 }
